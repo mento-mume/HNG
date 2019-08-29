@@ -1,0 +1,22 @@
+h3{
+color: red;
+}
+
+p{
+font-family: Verdana;
+}
+.main{
+    float: right;
+    margin-right: 300px;
+}
+.top{
+    text-align: center;
+}
+.flex-container{
+    display: flex;
+}
+.td{
+    padding: 150px;
+    height: 150px;
+    margin-bottom: 15px
+};
