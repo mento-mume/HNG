@@ -18,7 +18,8 @@
           </div>
           
          <div class="flex-container">
-             <div style="background-color: aqua; margin-right: 50px;">
+             <div style=" background-color: aqua;margin-right: 50px;">
+                 <div>
                  <h2>Personal Details</h2>         
                 <table width ="400">
                  <tr><td>Date Of Birth</td>
@@ -41,6 +42,25 @@
               <p>Abuja Nigeria</p>
                  <p>+2348164558930</p>
          <p> jnrkevin001@gmail.com</p>
+            </div>     
+                  <div  class="contact">
+                     <h2>Contact Ndukeabasi</h2>
+                     <form name ="contactForm" onsubmit="return validate()">
+                         
+                         <input type="text" id ="name" name ="fullname" placeholder ="Name" required minlength="4">
+                         <br>
+                         <input type="email" id="email" name="emailaddress" placeholder="Email">
+                         <br>
+                         <input type="text" id="title" name="title" placeholder="Title" >
+                         <br>
+                         <textarea id="Message" name="message" placeholder="Write Message Here" minlength="20"></textarea>
+                         <br>
+                         <input type="submit" value="Send Message"
+                                onclick ="stringlength(document.contactForm.fullname,4)">
+                     </form>
+                      <script src="validate.js"></script>
+                 </div>  
+              
             </div>
              <div>
           <h2>SKILLS</h2>
@@ -69,5 +89,39 @@
          </div>
        
     </body>
+
+    <script>
+
+        function validate()
+        {
+            if(document.contactForm.fullname.value == "")
+            {
+                alert("please provide your name!");
+                document.contactForm.fullname.focus();
+                return false;
+            }
+
+            if (document.contactForm.emailaddress.value == "")
+            {
+                alert("please provide your email!");
+                document.contactForm.emailaddress.focus();
+                return false;
+            }
+
+            if(document.contactForm.title.value == " ")
+            {
+                alert("please provide your title!");
+                document.contactForm.title.focus();
+                return false;
+            }
+            if(document.contactForm.message.value == " ")
+            {
+                alert("please include your mesage");
+                document.contactForm.message.focus();
+                return false;
+            }
+            return(true);
+        }
+    </script>
   
 </html>
